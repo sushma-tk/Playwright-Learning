@@ -2,7 +2,8 @@ const {test, expect} = require('@playwright/test');
 
 // test.describe.configure({mode : 'parallel'})
 test('Browser context test', async ({browser})=>
-{
+{   
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const context = await browser.newContext();
     const page= await context.newPage();
 
@@ -31,20 +32,24 @@ test('Browser context test', async ({browser})=>
     const allTitles = await cardTitles.allTextContents();
     console.log(allTitles);
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 
 test('page test', async ({page})=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.goto("https://google.com/");
     console.log(await page.title());
     await expect(page).toHaveTitle("Google");
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 
 test('UI controls', async ({browser})=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const context = await browser.newContext();
     const page = await context.newPage();
     const userName = page.locator("#username");
@@ -80,11 +85,13 @@ test('UI controls', async ({browser})=>
     //await signIn.click();
 
     
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 
 test("Child window test", async ({browser})=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
@@ -106,4 +113,5 @@ test("Child window test", async ({browser})=>
     await userName.fill(domain);
     console.log(await userName.inputValue());
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });

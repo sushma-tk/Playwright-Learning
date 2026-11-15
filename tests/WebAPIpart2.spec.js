@@ -26,6 +26,7 @@ test.beforeAll(async ({browser}) => {
 
 test('test', async ()=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const email = "sushma.tacholi@gmail.com"
     // removed {browser}. as we just dynamically created new browser context in beforeAll().
     const page = await webContext.newPage();
@@ -105,13 +106,14 @@ test('test', async ()=>
 
     const orderIdDetails = await page.locator(".col-text").textContent();
     expect(orderId.includes(orderIdDetails)).toBeTruthy();
-
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 }
 );
 
 
 
 test('test2', async ()=>{
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const page = await webContext.newPage();
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login"); 
     await page.waitForLoadState('networkidle');
@@ -120,6 +122,7 @@ test('test2', async ()=>{
     const count = await products.count();
     console.log(count);
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 }
 );
 

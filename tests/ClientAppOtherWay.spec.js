@@ -2,6 +2,7 @@ const {test, expect} = require('@playwright/test');
 
 test('test2', async ({browser})=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const context = await browser.newContext();
     const page= await context.newPage();
 
@@ -49,6 +50,7 @@ test('test2', async ({browser})=>
     //const orderId = await page.locator('.em-spacer-1 .ng-star-inserted').textContent();
     //console.log(orderId);
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 }
 );
 

@@ -16,7 +16,8 @@ test.beforeAll( async()=>
 
 //create order is success
 test('@API Place the order', async ({page})=>
-{ 
+{  
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.addInitScript(value => {
 
         window.localStorage.setItem('token',value);
@@ -39,6 +40,7 @@ for(let i =0; i<await rows.count(); ++i)
 const orderIdDetails =await page.locator(".col-text").textContent();
 //await page.pause();
 expect(response.orderId.includes(orderIdDetails)).toBeTruthy();
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 
 });
 

@@ -10,16 +10,18 @@ const fakePayLoadOrders = {data: [], message: "No Orders"};
 let response;
 test.beforeAll( async()=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
    const apiContext = await request.newContext();
    const apiUtils = new APiUtils(apiContext,loginPayLoad);
    response =  await apiUtils.createOrder(orderPayLoad);
-
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 })
 
 
 //create order is success
 test('@API Place the order', async ({page})=>
 { 
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.addInitScript(value => {
 
         window.localStorage.setItem('token',value);
@@ -47,6 +49,7 @@ await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-c
 
 
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 

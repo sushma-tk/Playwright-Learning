@@ -1,0 +1,106 @@
+
+Running 18 tests using 4 workers
+
+START | test2 | worker 2 | 10:24:34 PM
+START | test2 | worker 3 | 10:24:34 PM
+START | Screenshot & visual comparison | worker 0 | 10:24:34 PM
+START | Visual comparison | worker 1 | 10:24:34 PM
+ADIDAS ORIGINAL
+[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro', 'qwerty' ]
+END   | test2 | worker 2 | 10:24:44 PM
+  ✓   4 tests/ClientApp.spec.js:112:1 › test2 (10.1s)
+START | Special  | worker 2 | 10:24:45 PM
+END   | Screenshot & visual comparison | worker 0 | 10:24:46 PM
+  ✓   2 tests/AutomationPractice.spec.js:58:1 › Screenshot & visual comparison (11.6s)
+START | upalod-download test validation | worker 0 | 10:24:46 PM
+END   | Special  | worker 2 | 10:24:48 PM
+END   | upalod-download test validation | worker 0 | 10:24:48 PM
+  ✓   5 tests/ecomApp.spec.js:3:1 › Special  (3.9s)
+  ✓   6 tests/excel-download-upload.spec.js:60:1 › upalod-download test validation (2.6s)
+START | @API Place the order | worker 0 | 10:24:48 PM
+END   | test2 | worker 3 | 10:24:49 PM
+  ✓   3 tests/ClientAppOtherWay.spec.js:3:1 › test2 (14.7s)
+START | Security Test request intercept | worker 3 | 10:24:49 PM
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk3NjU2ZTIxMDU0YmE0NjUwNGU0MjAiLCJ1c2VyRW1haWwiOiJzdXNobWEudGFjaG9saUBnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjo0MDg1MDgxMzU5LCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzkyNjQ2Njg5LCJleHAiOjE4MjQyMDQyODl9.GKC9SKByAgAfoHdTvutMAmBuXcfJ96YDi2V7CKzhaIc
+{
+  orders: [ '6ad99e22a90a419aa8205eb9' ],
+  productOrderId: [ '6960eac0c941646b7a8b3e68' ],
+  message: 'Order Placed Successfully'
+}
+END   | @API Place the order | worker 0 | 10:24:50 PM
+START | @API Place the order | worker 0 | 10:24:50 PM
+END   | Visual comparison | worker 1 | 10:24:52 PM
+  ✓   1 tests/AutomationPractice.spec.js:75:1 › Visual comparison (17.3s)
+START | Test1 | worker 1 | 10:24:52 PM
+LoginPage Practise | Rahul Shetty Academy
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk3NjU2ZTIxMDU0YmE0NjUwNGU0MjAiLCJ1c2VyRW1haWwiOiJzdXNobWEudGFjaG9saUBnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjo0MDg1MDgxMzU5LCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzkyNjQ2Njk2LCJleHAiOjE4MjQyMDQyOTZ9.Sopm2RT4UHztBNTxxBPG-k8Z1C2g0x-VBNu9_XzfLpA
+END   | Security Test request intercept | worker 3 | 10:24:56 PM
+  ✓   9 tests/NetworkTest2.spec.js:3:1 › Security Test request intercept (7.4s)
+START | Browser context test | worker 3 | 10:24:56 PM
+{
+  orders: [ '6ad99e28a90a419aa8205efc' ],
+  productOrderId: [ '6960eac0c941646b7a8b3e68' ],
+  message: 'Order Placed Successfully'
+}
+START | Fixtures demo | worker 2 | 10:24:57 PM
+ZARA COAT 3
+END   | Fixtures demo | worker 2 | 10:24:57 PM
+  ✓   7 tests/FixturesDemo.spec.js:7:1 › Fixtures demo (8.6s)
+START | page test | worker 2 | 10:24:57 PM
+LoginPage Practise | Rahul Shetty Academy
+ You have No Orders to show at this time. Please Visit Back Us 
+END   | @API Place the order | worker 0 | 10:24:59 PM
+  ✓   8 tests/NetworkTest1.spec.js:22:1 › @API Place the order (8.9s)
+START | UI controls | worker 0 | 10:24:59 PM
+Google
+END   | page test | worker 2 | 10:24:59 PM
+  ✓  12 tests/UIBasictest.spec.js:39:1 › page test (2.0s)
+START | Child window test | worker 2 | 10:24:59 PM
+Incorrect username/password.
+[]
+END   | Browser context test | worker 3 | 10:25:01 PM
+  ✓  11 tests/UIBasictest.spec.js:4:1 › Browser context test (4.6s)
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk3NjU2ZTIxMDU0YmE0NjUwNGU0MjAiLCJ1c2VyRW1haWwiOiJzdXNobWEudGFjaG9saUBnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjo0MDg1MDgxMzU5LCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzkyNjQ2NzAyLCJleHAiOjE4MjQyMDQzMDJ9.wynNmGx1Z7rtVdLm1H_pdaV-56poQ7Hg5xPj48DjhXg
+[ 'iphone X', 'Samsung Note 8', 'Nokia Edge', 'Blackberry' ]
+END   | Test1 | worker 1 | 10:25:02 PM
+  ✓  10 tests/NetworkTest3.spec.js:3:1 › Test1 (10.6s)
+*****
+{
+  orders: [ '6ad99e2ea90a419aa8205f0e' ],
+  productOrderId: [ '6960eac0c941646b7a8b3e68' ],
+  message: 'Order Placed Successfully'
+}
+6ad99e2ea90a419aa8205f0e
+START | test | worker 3 | 10:25:02 PM
+END   | UI controls | worker 0 | 10:25:03 PM
+  ✓  13 tests/UIBasictest.spec.js:50:1 › UI controls (4.4s)
+Please email us at mentor@rahulshettyacademy.com with below template to receive response 
+rahulshettyacademy.com
+END   | Child window test | worker 2 | 10:25:03 PM
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk3NjU2ZTIxMDU0YmE0NjUwNGU0MjAiLCJ1c2VyRW1haWwiOiJzdXNobWEudGFjaG9saUBnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjo0MDg1MDgxMzU5LCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzkyNjQ2NzAzLCJleHAiOjE4MjQyMDQzMDN9.A90lApzuvbvoR8g3mrqeTHS3AMm7qEgayJoFR07sx8o
+  ✓  14 tests/UIBasictest.spec.js:92:1 › Child window test (4.7s)
+{
+  orders: [ '6ad99e30a90a419aa8205f17' ],
+  productOrderId: [ '6960eac0c941646b7a8b3e68' ],
+  message: 'Order Placed Successfully'
+}
+START | @API Place the order | worker 1 | 10:25:04 PM
+END   | test | worker 3 | 10:25:08 PM
+  ✓  15 tests/webAPIpart1.spec.js:40:1 › test (10.9s)
+END   | @API Place the order | worker 1 | 10:25:09 PM
+  ✓  16 tests/WebAPIpart1Update.spec.js:18:1 › @API Place the order (4.8s)
+START | test | worker 0 | 10:25:09 PM
+START | test2 | worker 2 | 10:25:10 PM
+4
+END   | test2 | worker 2 | 10:25:15 PM
+  ✓  18 tests/WebAPIpart2.spec.js:115:1 › test2 (5.1s)
+ | 6ad99e42a90a419aa8205f8b | 
+END   | test | worker 0 | 10:25:24 PM
+  ✓  17 tests/WebAPIpart2.spec.js:27:1 › test (14.8s)
+
+  18 passed (49.9s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

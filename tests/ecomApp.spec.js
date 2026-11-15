@@ -1,7 +1,8 @@
 const {test, expect} = require('@playwright/test');
 
 test("Special ", async ({page})=>
-{
+{   
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.goto("https://rahulshettyacademy.com/angularpractice/");
     await page.getByLabel('Check me out if you Love IceCreams!').click();
     await page.getByText('Employed').check();
@@ -12,6 +13,7 @@ test("Special ", async ({page})=>
     await page.getByRole("link", {name : 'Shop'}).click();
     await page.locator("app-card").filter({hasText:'Nokia Edge'}).getByRole("button").click();
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 // test expect timeout example 

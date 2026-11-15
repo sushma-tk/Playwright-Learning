@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
 test('Security Test request intercept', async ({page})=> {
-
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill("sushma.tacholi@gmail.com");
     await page.locator("#userPassword").fill("Sushma@1234");
@@ -14,7 +14,7 @@ test('Security Test request intercept', async ({page})=> {
     )
     await page.locator('button:has-text("View")').first().click();
     await expect(page.locator("p").last()).toHaveText("You are not authorize to view this order");
-
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 }
 );
 

@@ -39,6 +39,7 @@ test.beforeAll(async () => {
 
 test('test', async ({browser})=>
 {
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     const context = await browser.newContext();
     const page= await context.newPage();
 
@@ -70,6 +71,7 @@ test('test', async ({browser})=>
     await page.pause();
     expect(orderId.includes(orderIdDetails)).toBeTruthy();
 
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 }
 );
 

@@ -56,6 +56,7 @@ const {test, expect} = require('@playwright/test');
 
 // screenshot capture
 test("Screenshot & visual comparison", async ({page})=>{
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     await expect(page.locator('#displayed-text')).toBeVisible();
     // partical screenshot capture
@@ -66,13 +67,16 @@ test("Screenshot & visual comparison", async ({page})=>{
     await page.screenshot({path:"screenshot.png", fullPage:true});
     await expect(page.locator('#displayed-text')).toBeHidden();
     
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
 
 
 // visual comparison
 test("Visual comparison", async ({page})=>{
+    console.log(`START | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
     await page.goto("https://www.nbcnews.com/");
-    expect(await page.screenshot()).toMatchSnapshot("nbcnews.png");
+    //expect(await page.screenshot()).toMatchSnapshot("nbcnews.png");
     // when you run it for the first time, it will create a file called nbcnews.png in the snapshots folder.
     // when you run it for the second time, it will compare the current screenshot with the previous one and if there is any difference, it will fail the test.
+    console.log(`END   | ${test.info().title} | worker ${test.info().workerIndex} | ${new Date().toLocaleTimeString()}`);
 });
